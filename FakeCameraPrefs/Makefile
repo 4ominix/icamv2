@@ -5,8 +5,8 @@ include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = FakeCameraPrefs
 FakeCameraPrefs_FILES = FakeCameraPrefsRootListController.m
-FakeCameraPrefs_FRAMEWORKS = UIKit MobileCoreServices AVFoundation Photos
-FakeCameraPrefs_PRIVATE_FRAMEWORKS = Preferences
+FakeCameraPrefs_FRAMEWORKS = UIKit AVFoundation Photos
+FakeCameraPrefs_LDFLAGS += -Wl,-undefined,dynamic_lookup
 FakeCameraPrefs_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/bundle.mk
