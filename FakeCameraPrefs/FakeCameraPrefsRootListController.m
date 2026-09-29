@@ -1,7 +1,6 @@
 #import <Preferences/PSListController.h>
 #import <Preferences/PSSpecifier.h>
 #import <UIKit/UIKit.h>
-#import <MobileCoreServices/MobileCoreServices.h>
 #import <AVFoundation/AVFoundation.h>
 #import <Photos/Photos.h>
 
@@ -50,8 +49,7 @@
                 UIImagePickerController *picker = [[UIImagePickerController alloc] init];
                 picker.delegate = self;
                 picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-                NSString *imageType = (NSString *)kUTTypeImage ?: @"public.image";
-                picker.mediaTypes = @[imageType];
+                picker.mediaTypes = @[@"public.image"];
                 picker.allowsEditing = NO;
                 [self presentViewController:picker animated:YES completion:nil];
             } else {
@@ -73,8 +71,7 @@
                 UIImagePickerController *picker = [[UIImagePickerController alloc] init];
                 picker.delegate = self;
                 picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-                NSString *movieType = (NSString *)kUTTypeMovie ?: @"public.movie";
-                picker.mediaTypes = @[movieType];
+                picker.mediaTypes = @[@"public.movie"];
                 picker.videoQuality = UIImagePickerControllerQualityTypeHigh;
                 picker.allowsEditing = NO;
                 [self presentViewController:picker animated:YES completion:nil];
