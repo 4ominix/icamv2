@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>TRẠNG THÁI HỆ THỐNG</string>
+			<key>footerText</key>
+			<string>Bật để thay thế luồng camera thật bằng media giả trên mọi ứng dụng hệ thống và bên thứ ba.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.weat.fakecamera</string>
+			<key>key</key>
+			<string>isEnabled</string>
+			<key>label</key>
+			<string>Bật Fake Camera</string>
+			<key>PostNotification</key>
+			<string>com.weat.fakecamera/prefsupdated</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>CHỌN NGUỒN MEDIA TỪ THƯ VIỆN</string>
+			<key>footerText</key>
+			<string>Bấm chọn ảnh hoặc video trực tiếp từ Thư Viện Ảnh (Photos) để nạp vào hệ thống fake camera.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>selectImageFromLibrary</string>
+			<key>label</key>
+			<string>📷 Chọn Ảnh Tại Thư Viện</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>selectVideoFromLibrary</string>
+			<key>label</key>
+			<string>🎬 Chọn Video Tại Thư Viện</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>CHẾ ĐỘ PHÁT HIỆN TẠI</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<integer>1</integer>
+			<key>defaults</key>
+			<string>com.weat.fakecamera</string>
+			<key>key</key>
+			<string>mediaType</string>
+			<key>label</key>
+			<string>Chế Độ Hoạt Động</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>validValues</key>
+			<array>
+				<integer>1</integer>
+				<integer>2</integer>
+			</array>
+			<key>validTitles</key>
+			<array>
+				<string>Hình Ảnh (Tĩnh)</string>
+				<string>Video (Vòng Lặp)</string>
+			</array>
+			<key>PostNotification</key>
+			<string>com.weat.fakecamera/prefsupdated</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>ĐƯỜNG DẪN TỆP TIN ĐANG DÙNG</string>
+			<key>footerText</key>
+			<string>Đường dẫn tự động cập nhật khi bạn chọn từ thư viện hoặc bạn có thể chỉnh tay đường dẫn tùy ý.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>default</key>
+			<string>/var/mobile/Documents/FakeCamera/fake_image.jpg</string>
+			<key>defaults</key>
+			<string>com.weat.fakecamera</string>
+			<key>key</key>
+			<string>imagePath</string>
+			<key>label</key>
+			<string>Tệp Ảnh</string>
+			<key>PostNotification</key>
+			<string>com.weat.fakecamera/prefsupdated</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>default</key>
+			<string>/var/mobile/Documents/FakeCamera/fake_video.mp4</string>
+			<key>defaults</key>
+			<string>com.weat.fakecamera</string>
+			<key>key</key>
+			<string>videoPath</string>
+			<key>label</key>
+			<string>Tệp Video</string>
+			<key>PostNotification</key>
+			<string>com.weat.fakecamera/prefsupdated</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Fake Camera</string>
+</dict>
+</plist>
