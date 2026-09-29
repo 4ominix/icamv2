@@ -1,0 +1,9 @@
+Package: com.weat.fakecamera
+Name: FakeCameraWeat
+Depends: mobilesubstrate, preferenceloader
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: Cấu hình camera giả cho toàn bộ hệ thống
+Maintainer: Weat
+Author: Weat
+Section: System
